@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jeff Corporal | CPA and Bookkeeper for E-commerce and Small Businesses</title>
+  <meta name="description" content="Jeff Corporal, CPA. Bookkeeping, reconciliations, AP/AR and month-end close for e-commerce and small businesses.">
+
+  <!-- Fonts: Fraunces for headings, IBM Plex Sans for text, IBM Plex Mono for the ledger -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+
+  <!-- ============ LOADING SCREEN: an adding-machine tape that balances ============ -->
+  <div class="loader" id="loader" aria-hidden="true">
+    <div class="tape">
+      <div class="tape-head"><span>JC</span><span>LEDGER 001</span></div>
+      <div class="tape-row" style="--i:0"><span>Opening bal.</span><span>10,000.00</span></div>
+      <div class="tape-row" style="--i:1"><span>Sales</span><span>8,450.00</span></div>
+      <div class="tape-row" style="--i:2"><span>Expenses</span><span>(3,215.50)</span></div>
+      <div class="tape-row" style="--i:3"><span>Payroll</span><span>(2,734.50)</span></div>
+      <div class="tape-rule"></div>
+      <div class="tape-row total" style="--i:4"><span>Total</span><span>12,500.00</span></div>
+      <div class="stamp">Balanced</div>
+    </div>
+    <p class="loader-caption">Reconciling your first impression<span class="dots"></span></p>
+  </div>
+
+  <div class="progress" id="progress"></div>
+
+  <!-- ============ SIDEBAR ============ -->
+  <aside class="sidebar">
+    <div class="side-head">
+      <a class="profile" href="#home">
+        <span class="avatar-wrap"><img class="avatar" src="images/profile-cartoon.png" alt="Jeff Corporal"></span>
+        <span class="name">Jeff Corporal</span>
+        <span class="role">CPA and bookkeeper</span>
+      </a>
+
+      <span class="location">
+        <svg class="flag" viewBox="0 0 1000 500" role="img" aria-label="Philippine flag">
+          <defs><path id="phStar" d="M0-30 7.05-9.71 28.53-9.27 11.41 3.71 17.63 24.27 0 12-17.63 24.27-11.41 3.71-28.53-9.27-7.05-9.71z"/></defs>
+          <rect width="1000" height="250" fill="#0038A8"/>
+          <rect y="250" width="1000" height="250" fill="#CE1126"/>
+          <path d="M0 0 433 250 0 500z" fill="#fff"/>
+          <g fill="#FCD116">
+            <circle cx="162" cy="250" r="48"/>
+            <g stroke="#FCD116" stroke-width="16">
+              <path d="M222 250h35M102 250H67M162 190v-35M162 310v35M204 208l25-25M120 292l-25 25M204 292l25 25M120 208l-25-25"/>
+            </g>
+            <use href="#phStar" x="55" y="62"/>
+            <use href="#phStar" x="55" y="438"/>
+            <use href="#phStar" x="375" y="250"/>
+          </g>
+        </svg>
+        Philippines, working remotely
+      </span>
+
+      <span class="status"><i></i>Taking new clients</span>
+
+      <a class="btn btn-resume" href="https://drive.google.com/drive/folders/1PTjbF-3yXX24Y_OiregDaLrnYAbKxkoL" target="_blank" rel="noopener">Resume</a>
+    </div>
+
+    <nav class="nav" id="nav" aria-label="Sections">
+      <span class="nav-indicator" id="navIndicator"></span>
+      <a href="#home">Home</a>
+      <a href="#projects">Projects</a>
+      <a href="#services">Services</a>
+      <a href="#showcase">Showcase</a>
+      <a href="#about">About</a>
+      <a href="#faq">FAQs / Contact</a>
+    </nav>
+  </aside>
+
+  <!-- ============ MAIN ============ -->
+  <main class="page">
+
+    <!-- HERO: headline + a reconciliation that balances -->
+    <section class="hero" id="home">
+      <div class="hero-text">
+        <h1>Books that keep up with your business.</h1>
+        <p class="lede">
+          I'm Jeff, a Certified Public Accountant with 5+ years in audit and outsourced accounting.
+          I keep your books clean, reconciled and closed every month, so you always know where your money went.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#contact">Book a free intro call</a>
+          <a class="btn btn-ghost" href="#services">See services</a>
+        </div>
+        <p class="hero-for">For online stores, small businesses, and owners who are a few months behind.</p>
+      </div>
+
+      <figure class="recon" id="recon">
+        <div class="recon-head"><span>Bank reconciliation</span><span>Month-end</span></div>
+        <div class="recon-row" style="--i:0"><span>Balance per bank</span><span>48,320.15</span></div>
+        <div class="recon-row" style="--i:1"><span>Deposits in transit</span><span>3,150.00</span></div>
+        <div class="recon-row" style="--i:2"><span>Outstanding checks</span><span>(2,075.40)</span></div>
+        <div class="recon-row sub" style="--i:3"><span>Adjusted bank balance</span><span>49,394.75</span></div>
+        <div class="recon-row" style="--i:4"><span>Balance per books</span><span>50,635.25</span></div>
+        <div class="recon-row fix" style="--i:5"><span>Refund not yet recorded</span><span>(1,240.50)</span></div>
+        <div class="recon-row sub" style="--i:6"><span>Adjusted book balance</span><span>49,394.75</span></div>
+        <div class="recon-row diff" style="--i:7"><span>Difference</span><span id="reconDiff">0.00</span></div>
+        <div class="stamp">Balanced</div>
+        <figcaption>Sample reconciliation with illustrative figures.</figcaption>
+      </figure>
+    </section>
+
+    <!-- CREDENTIALS: a wide strip -->
+    <section class="cred" id="credentials">
+      <div class="seal" aria-hidden="true">
+        <svg viewBox="0 0 120 120">
+          <defs><path id="sealPath" d="M60,60 m-44,0 a44,44 0 1,1 88,0 a44,44 0 1,1 -88,0"/></defs>
+          <text><textPath href="#sealPath">CERTIFIED PUBLIC ACCOUNTANT &#183; CERTIFIED PUBLIC ACCOUNTANT &#183;</textPath></text>
+        </svg>
+        <span>CPA</span>
+      </div>
+      <div class="cred-main">
+        <h2>Certified Public Accountant</h2>
+        <p>PRC-licensed, 2019</p>
+      </div>
+      <div class="cred-certs">
+        <!-- To add a certification, copy one <li> line and edit it. -->
+        <ul class="cert-list">
+          <li><strong>Xero Advisor Certified</strong><span>Xero</span></li>
+          <li><strong>L1 Xero Certified Associate</strong><span>Xero</span></li>
+          <li><strong>QuickBooks Certification</strong><span>Intuit QuickBooks</span></li>
+        </ul>
+        <a class="cred-link" href="https://www.linkedin.com/in/jeff-anthony-corporal-cpa-79188519b/details/certifications/" target="_blank" rel="noopener">See all on LinkedIn</a>
+      </div>
+    </section>
+
+    <!-- TOOLS: a plain moving band -->
+    <section class="tools" aria-label="Tools I work with">
+      <h2>Tools I work with</h2>
+      <div class="marquee">
+        <ul class="track">
+          <li>QuickBooks Online</li><li>Xero</li><li>NetSuite</li><li>SAP</li><li>Yardi Voyager</li>
+          <li>Bill.com</li><li>Brex</li><li>Excel (Advanced / VBA)</li><li>Power Query</li>
+          <li>Google Sheets</li><li>ClickUp</li><li>Tres Finance</li><li>Claude Code</li>
+        </ul>
+      </div>
+      <div class="marquee reverse">
+        <ul class="track">
+          <li>Month-end close</li><li>Bank reconciliations</li><li>AP / AR</li><li>Financial reporting</li>
+          <li>Accruals</li><li>Vendor payments</li><li>Customer billing</li><li>Lease accounting</li>
+          <li>Treasury reporting</li><li>Audit support</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- SERVICES: a ruled ledger, no card -->
+    <section class="services-sec" id="services">
+      <div class="services-intro">
+        <h2>What I can take off your plate</h2>
+        <p>Pick one service or hand over the whole close. Either way, you get books you can trust.</p>
+      </div>
+      <ul class="ledger">
+        <li>
+          <h3>Bookkeeping setup and cleanup</h3>
+          <p>Starting fresh or months behind. I set up your chart of accounts, or catch up and fix what's already there.</p>
+          <span class="tag">One-time</span>
+        </li>
+        <li>
+          <h3>Accounts payable</h3>
+          <p>Bills recorded and paid on schedule, so vendors stop chasing you.</p>
+          <span class="tag">Monthly</span>
+        </li>
+        <li>
+          <h3>Accounts receivable</h3>
+          <p>Invoices sent on time and payments matched, so you know who still owes you.</p>
+          <span class="tag">Monthly</span>
+        </li>
+        <li>
+          <h3>Reconciliations</h3>
+          <p>Bank, credit card and payment processor accounts tied out every month.</p>
+          <span class="tag">Monthly</span>
+        </li>
+        <li>
+          <h3>Month-end close</h3>
+          <p>A repeatable checklist, so your month closes on a set date instead of "whenever."</p>
+          <span class="tag">Monthly</span>
+        </li>
+        <li>
+          <h3>Financial reporting</h3>
+          <p>P&amp;L, balance sheet and cash flow you can actually read, with a short note on what changed.</p>
+          <span class="tag">Monthly</span>
+        </li>
+      </ul>
+    </section>
+
+    <!-- PROJECTS + AUTOMATION -->
+    <div class="duo">
+      <section class="projects" id="projects">
+        <div class="card-top">
+          <h2>Sample case study: an online health-products store</h2>
+          <span class="pill">In progress</span>
+        </div>
+        <p>A full set of books for a small e-commerce company selling internationally.</p>
+        <ul class="deliverables">
+          <li>Chart of accounts</li>
+          <li>A month of transactions, reconciled</li>
+          <li>P&amp;L and balance sheet</li>
+          <li>Closing report pack</li>
+        </ul>
+      </section>
+
+      <section class="auto" id="showcase">
+        <div class="card-top">
+          <h2>Automation and tools</h2>
+          <span class="pill pill-light">Coming soon</span>
+        </div>
+        <p>Small builds that make the close faster.</p>
+        <ul class="auto-list">
+          <li><span>Treasury dashboard</span><small>Rebuilt with sample data</small></li>
+          <li><span>Excel VBA helpers</span><small>For repetitive entries and checks</small></li>
+        </ul>
+      </section>
+    </div>
+
+    <!-- ABOUT: experience as a full-width timeline -->
+    <section class="about" id="about">
+      <div class="about-intro">
+        <h2>From auditing books to keeping them</h2>
+        <p>
+          I started in audit at PwC, then moved to the other side of the ledger, running AP/AR,
+          reconciliations and month-end close in outsourced accounting. That mix is why I keep books
+          that would hold up if an auditor ever looked at them.
+        </p>
+      </div>
+      <ol class="timeline">
+        <li>
+          <span class="when">Jul 2025 &ndash; Present</span>
+          <strong>Senior Associate</strong>
+          <span class="where">Anchored Solutions MNL, Inc</span>
+          <span class="what">End-to-end AP/AR, reconciliations and treasury reporting (cash &amp; crypto) across QuickBooks, NetSuite and Yardi Voyager.</span>
+        </li>
+        <li>
+          <span class="when">Nov 2023 &ndash; Jul 2025</span>
+          <strong>Experienced Associate</strong>
+          <span class="where">Anchored Solutions MNL, Inc</span>
+          <span class="what">AP invoices, vendor payments, customer billing and month-end close support in Yardi Voyager and QuickBooks Online.</span>
+        </li>
+        <li>
+          <span class="when">Apr 2022 &ndash; Aug 2023</span>
+          <strong>Finance Analyst</strong>
+          <span class="where">Intelligent e-Processes Technologies Corporation</span>
+          <span class="what">Monthly financial reports, bank reconciliations and lease computations under PFRS 16.</span>
+        </li>
+        <li>
+          <span class="when">Sept 2020 &ndash; Dec 2021</span>
+          <strong>Audit Associate</strong>
+          <span class="where">PwC Acceleration Centre Manila</span>
+          <span class="what">Audit procedures including vouching, analytical review and substantive testing.</span>
+        </li>
+      </ol>
+    </section>
+
+    <!-- HOW IT WORKS: a real sequence, so numbered -->
+    <section class="how">
+      <div class="how-head">
+        <h2>Getting started is simple</h2>
+        <a class="btn btn-primary" href="#contact">Start with step 1</a>
+      </div>
+      <ol class="steps">
+        <li><span>1</span><h3>Intro call</h3><p>15 to 30 minutes. You tell me how things run today, and I ask a lot of questions.</p></li>
+        <li><span>2</span><h3>Review and quote</h3><p>I look at where your books stand and send a clear monthly quote.</p></li>
+        <li><span>3</span><h3>Onboarding</h3><p>Access set up, cleanup if needed, and a close calendar we both follow.</p></li>
+        <li><span>4</span><h3>Every month</h3><p>Books updated, reconciled and reported. You get a short summary of what changed.</p></li>
+      </ol>
+    </section>
+
+    <!-- FAQ + CONTACT -->
+    <div class="faq-contact">
+      <section class="faq-sec" id="faq">
+        <h2>Questions people usually ask</h2>
+        <div class="faq">
+          <details>
+            <summary>What kind of businesses do you work with?</summary>
+            <p>Mostly e-commerce sellers and small businesses that want a CPA looking after their books, not just someone entering transactions.</p>
+          </details>
+          <details>
+            <summary>Which accounting software do you use?</summary>
+            <p>Mostly QuickBooks Online and Xero. I've also worked in NetSuite, SAP and Yardi Voyager, and I'm happy to work in whatever you already use.</p>
+          </details>
+          <details>
+            <summary>How much does it cost?</summary>
+            <p>It depends on your transaction volume and how many accounts you have. I share pricing after a short call so the quote actually fits your business.</p>
+          </details>
+          <details>
+            <summary>I'm months behind on my books. Can you help?</summary>
+            <p>Yes. Catch-up and cleanup work is a common starting point. We get you current first, then keep you there every month.</p>
+          </details>
+          <details>
+            <summary>Do you work remotely?</summary>
+            <p>Yes. Everything is done online, and I keep regular check-ins so you're never wondering what's happening with your books.</p>
+          </details>
+        </div>
+      </section>
+
+      <section class="contact" id="contact">
+        <h2>Have a pile of receipts and a bank feed you've been avoiding?</h2>
+        <p>Send me a message by email or LinkedIn, or find me on OnlineJobs.ph. I'll reply within one business day, and the first call is free.</p>
+
+        <div class="socials">
+          <a class="social" href="mailto:jeffanthony.g.corporal@gmail.com" aria-label="Email me on Gmail" data-tip="Gmail">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 6.5v11.75C2 19.22 2.78 20 3.75 20H7v-8.5l5 3.75 5-3.75V20h3.25c.97 0 1.75-.78 1.75-1.75V6.5a2 2 0 0 0-3.2-1.6L12 10 5.2 4.9A2 2 0 0 0 2 6.5z"/></svg>
+          </a>
+          <a class="social" href="https://www.linkedin.com/in/jeff-anthony-corporal-cpa-79188519b/" target="_blank" rel="noopener" aria-label="My LinkedIn profile" data-tip="LinkedIn">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.75h4V21H3zM9.5 9.75h3.8v1.6h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1V21h-4v-4.75c0-1.13-.02-2.6-1.58-2.6-1.59 0-1.83 1.24-1.83 2.52V21h-4z"/></svg>
+          </a>
+          <a class="social" href="https://v2.onlinejobs.ph/jobseekers/info/2954853" target="_blank" rel="noopener" aria-label="My OnlineJobs.ph profile" data-tip="OnlineJobs.ph">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 3a2 2 0 0 0-2 2v1H4a2 2 0 0 0-2 2v3h20V8a2 2 0 0 0-2-2h-3V5a2 2 0 0 0-2-2H9zm0 2h6v1H9V5zM2 13v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6h-8v1.5a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1V13H2z"/></svg>
+          </a>
+          <a class="btn btn-light" href="https://drive.google.com/drive/folders/1PTjbF-3yXX24Y_OiregDaLrnYAbKxkoL" target="_blank" rel="noopener">View my resume</a>
+        </div>
+      </section>
+    </div>
+
+    <footer class="footer">
+      <span>&copy; <span id="year">2026</span> Jeff Corporal, CPA</span>
+      <a href="#home">Back to top</a>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

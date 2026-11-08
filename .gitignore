@@ -1,0 +1,9 @@
+# Operating system files
+Thumbs.db
+.DS_Store
+
+# Private project notes (planning context for Claude Code, not for the public site)
+CLAUDE.md
+
+# Backup photo, kept on this computer only
+images/profile-formal.png
